@@ -238,7 +238,5 @@ st.write("""
 これらのテクニックを、これからの資料作りやプレゼンテーションにぜひ活かしてみてください！ 🎉
 """)
 
-st.balloons()
-
 st.markdown("---")
 st.markdown("**Thank you for learning with us!**")
