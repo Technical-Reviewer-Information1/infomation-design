@@ -4,12 +4,12 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 st.set_page_config(
-    page_title="体験して学ぶ！情報デザインの世界",
+    page_title="情報デザイン",
     page_icon="🎨",
     layout="wide"
 )
 
-st.title("体験して学ぶ！情報デザインの世界 🎨")
+st.title("情報デザイン🎨")
 st.caption("Created by Dit-Lab.(Daiki ITO)")
 st.caption("Supported by Tomoaki ATSUMI")
 
