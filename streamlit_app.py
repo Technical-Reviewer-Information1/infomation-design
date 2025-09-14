@@ -9,7 +9,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("情報デザイン🎨")
+st.title("情報デザイン（pp.194-196）")
 st.caption("Created by Dit-Lab.(Daiki ITO)")
 st.caption("Supported by Tomoaki ATSUMI")
 
