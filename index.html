@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>情報デザイン｜情報Ⅰ共通テスト対策問題集</title>
+<meta name="description" content="抽象化・可視化・構造化の3つの手法を実際に使い分けます。PREP法の並べかえや、目的に合った図の選び方も試せます。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 fill=%22%2315181c%22/%3E%3Ctext x=%2216%22 y=%2222%22 font-size=%2218%22 font-family=%22monospace%22 fill=%22%23fff%22 text-anchor=%22middle%22%3E01%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="inner">
+    <span class="eyebrow">第 7 章　情報デザイン　7-1</span>
+    <h1>情報デザイン（pp.194-195）</h1>
+    <p class="lead">抽象化・可視化・構造化の3つの手法を実際に使い分けます。PREP法の並べかえや、目的に合った図の選び方も試せます。</p>
+    <p class="credit">Created by Dit-Lab.(Daiki ITO)　/　Supported by Tomoaki ATSUMI</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="step" id="step1">
+    <h2><span class="no">STEP 1</span>情報デザインの3つの手法（問1）</h2>
+    <p class="desc">情報デザインとは、情報を受け手に分かりやすく整理・表現するためのデザインです。手法は<strong>抽象化・可視化・構造化</strong>の3つ。</p>
+    <div class="panel">
+      <div class="tbl-scroll"><table class="tbl" id="methodTable"></table></div>
+      <hr class="sep">
+      <p class="qhead">a〜c の説明は、それぞれどの手法か</p>
+      <div class="methodgrid" id="methodBox"></div>
+      <div class="note" id="methodNote" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="step" id="step2">
+    <h2><span class="no">STEP 2</span>PREP法で並べかえる（問2）</h2>
+    <p class="desc"><strong>Point（要点）→ Reason（理由）→ Example（具体例）→ Point（まとめ）</strong>の順に文を並べます。カードを押して入れていきましょう。</p>
+    <div class="panel">
+      <div class="prep" id="prepSlots"></div>
+      <p class="qhead" style="margin-top:14px">文のカード</p>
+      <div class="cards" id="prepCards"></div>
+      <div class="btn-row" style="margin-top:10px">
+        <button class="btn" id="prepUndo">1つ戻す</button>
+        <button class="btn" id="prepReset">やり直す</button>
+      </div>
+      <div class="note" id="prepNote" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="step" id="step3">
+    <h2><span class="no">STEP 3</span>目的に合った図を選ぶ（問3）</h2>
+    <p class="desc">まず下の説明を1つ選び、次に合う図をクリックします。</p>
+    <div class="panel">
+      <div class="methodgrid" id="caseBox"></div>
+      <p class="qhead" style="margin-top:14px">図の解答群</p>
+      <div class="figgrid" id="figBox"></div>
+      <div class="note" id="figNote" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="step" id="step4">
+    <h2><span class="no">STEP 4</span>図の使い分けを整理する</h2>
+    <div class="panel">
+      <div class="tbl-scroll"><table class="tbl" id="useTable"></table></div>
+      <div class="note info" style="margin-top:12px">図は「見た目をよくするため」ではなく、<strong>伝えたい関係を表すため</strong>に選びます。分類なのか、流れなのか、階層なのか、2つの軸なのかを最初に決めましょう。</div>
+    </div>
+  </section>
+
+  <section class="step" id="glossary">
+    <h2><span class="no">用語</span>この節で出てくることば</h2>
+    <div class="panel"><div id="glossBox"></div></div>
+  </section>
+
+  <section class="step" id="wrap">
+    <h2><span class="no">まとめ</span>おさえておきたいこと</h2>
+    <div class="panel">
+      <ul class="bullets">
+        <li><strong>抽象化</strong>＝大量の情報から伝えたいことだけをシンプルに（ピクトグラム・アイコン）。</li>
+        <li><strong>可視化</strong>＝データを表やグラフで視覚的に（グラフ・インフォグラフィックス）。</li>
+        <li><strong>構造化</strong>＝関係・段階・順序で整理して（階層メニュー・文章の構造化）。</li>
+        <li><strong>PREP法</strong>＝要点 → 理由 → 具体例 → 要点。最初と最後に主張を置くのが特徴。</li>
+        <li>分類ならベン図、流れの繰り返しなら循環図、2つの軸ならマトリックス図、階層ならピラミッド図やツリー図。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="step">
+    <h2><span class="no">活用</span>授業・探究での使い方</h2>
+    <div class="use-note">
+      <h3>授業で</h3>
+      <ul>
+        <li>STEP 2 のPREP法は、そのまま1分間スピーチの原稿づくりに使える。並べかえた後に自分のテーマで書かせる。</li>
+        <li>STEP 3 で6種類の図を見せ、自分の探究テーマならどの図が合うかを考えさせる。</li>
+        <li>STEP 1 の3手法を、教室内の掲示物やWebサイトから見つけさせる。</li>
+      </ul>
+      <h3 style="margin-top:12px">探究で</h3>
+      <ul>
+        <li>自分の発表スライドを、抽象化・可視化・構造化の観点で見直して改善する。</li>
+        <li>同じデータを違う図で表し、伝わり方がどう変わるかを比べる。</li>
+        <li>身のまわりの案内表示を集め、情報デザインの手法で分類する。</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="app-footer">
+  情報Ⅰ 共通テスト対策問題集（技術評論社）連動Webアプリ　/　Created by Dit-Lab.(Daiki ITO)　/　Supported by Tomoaki ATSUMI
+</footer>
+
+<script src="js/tools.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/terms.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
