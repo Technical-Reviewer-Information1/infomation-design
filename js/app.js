@@ -146,6 +146,22 @@
   }
 
   function init() {
+    if (document.getElementById('chkBox')) {
+      const FG = ['ピラミッド図', 'ベン図', 'マトリックス図', '関連図', 'ツリー図', '循環図'];
+      window.Quiz.choice('chkBox', 'chkNote', [
+        { k: '1', q: 'アンケートで「部活動もアルバイトもしている人」の重なりを示したい。', ch: FG, a: 1,
+          why: '集合の<strong>重なり</strong>を表すのはベン図です。' },
+        { k: '2', q: '「なぜ遅刻が増えたのか」原因と結果のつながりを示したい。', ch: FG, a: 3,
+          why: '原因と結果の<strong>つながり</strong>を線で結ぶのが関連図です。' },
+        { k: '3', q: '価格と性能の2つの軸で、商品の位置づけを示したい。', ch: FG, a: 2,
+          why: '<strong>2つの軸</strong>で位置づけるのがマトリックス図です。' },
+        { k: '4', q: 'PDCAのように、くり返し回る流れを示したい。', ch: FG, a: 5,
+          why: '終わりが始まりに戻る流れは循環図です。順番だけならツリー図や矢印でも表せますが、<strong>くり返し</strong>を示すなら循環図です。' },
+        { k: '5', q: '委員会の組織や、フォルダの入れ子を示したい。', ch: FG, a: 4,
+          why: '<strong>枝分かれする階層</strong>はツリー図です。ピラミッド図は「上ほど重要・少数」という順位を表すときに使います。' }
+      ], '図は見た目で選ぶのではなく、<strong>表したい関係（重なり・つながり・2つの軸・くり返し・階層）</strong>で選びます。');
+    }
+
     $('prepUndo').addEventListener('click', () => { placed.pop(); drawPrep(); });
     $('prepReset').addEventListener('click', () => { placed = []; drawPrep(); });
     window.Terms.glossary($('glossBox'), ['情報デザイン', '抽象化', '可視化', '構造化', 'ピクトグラム', 'インフォグラフィックス']);
