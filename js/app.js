@@ -150,6 +150,29 @@
     $('prepReset').addEventListener('click', () => { placed = []; drawPrep(); });
     window.Terms.glossary($('glossBox'), ['情報デザイン', '抽象化', '可視化', '構造化', 'ピクトグラム', 'インフォグラフィックス']);
     drawMethodTable(); drawMethods(); drawPrep(); drawCases(); drawFigs(); drawUseTable();
+    Worksheet.make('wsBox', {
+      name: 'infomation-design',
+      fields: [
+        { id: 'd1', label: '① 取り上げる表示', hint: '案内図、時間割、注意書き、Webページなど。', rows: 2, ph: '例：保健室前の「けがをしたときの手順」の貼り紙' },
+        { id: 'd2', label: '② 伝えたい相手と場面', hint: 'どんな状態の人が、どれくらいの時間で読むか。', rows: 2, ph: '例：けがをして動揺している生徒が、10秒で読む' },
+        { id: 'd3', label: '③ 分かりにくい理由', hint: '情報が多い／順番が不明／文字だけ／色だけで区別、など。', rows: 3,
+          ph: '例：文字が多く、何から読めばよいか分からない。手順の順番が書かれていない' },
+        { id: 'd4', label: '④ どう直すか', hint: '構造化（グループ分け・順序）／可視化（図・矢印）／抽象化（ピクトグラム）。', rows: 3,
+          ph: '例：手順を①②③の番号つきに分け、各手順にピクトグラムを添える' },
+        { id: 'd5', label: '⑤ 直したあと、どう確かめるか', hint: '第三者に見せて測る。', rows: 2,
+          ph: '例：5人に見せて「最初にすることは？」を答えてもらい、正答率と時間を比べる' }
+      ],
+      build: function (v, e) {
+        return '<h4>情報デザイン改善シート</h4><dl>' +
+          '<dt>① 取り上げる表示</dt><dd>' + e(v.d1) + '</dd>' +
+          '<dt>② 相手と場面</dt><dd>' + e(v.d2) + '</dd>' +
+          '<dt>③ 分かりにくい理由</dt><dd>' + e(v.d3) + '</dd>' +
+          '<dt>④ 改善案</dt><dd>' + e(v.d4) + '</dd>' +
+          '<dt>⑤ 確かめ方</dt><dd>' + e(v.d5) + '</dd></dl>';
+      },
+      note: '③で「なんとなく見にくい」ではなく、<strong>どの原則に反しているか</strong>を書けると説得力が出ます。'
+    });
+
     window.Terms.attach();
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
