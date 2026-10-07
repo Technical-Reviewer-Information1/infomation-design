@@ -141,7 +141,7 @@
     $('useTable').innerHTML = '<thead><tr><th>図の種類</th><th>表せる関係</th><th>使う場面の例</th></tr></thead><tbody>' +
       FIGS.map(f => '<tr><td>' + f.no + '　<strong>' + f.nm + '</strong></td><td>' + f.use + '</td><td>' +
         ({ 'ピラミッド図': '重要度の順位、階層構造', 'ベン図': 'アンケートの分類、集合の重なり', 'マトリックス図': '価格と性能、緊急度と重要度',
-           '関連図': '原因と結果のつながり、人間関係', 'ツリー図': '組織図、フォルダ構成、分類の枝分かれ', '循環図': 'PDCAサイクル、季節のめぐり' }[f.nm]) +
+           '関連図': '原因と結果のつながり、人間関係', 'ツリー図（組織図）': '組織図、フォルダ構成、分類の枝分かれ', '循環図': 'PDCAサイクル、季節のめぐり' }[f.nm]) +
         '</td></tr>').join('') + '</tbody>';
   }
 
@@ -190,6 +190,8 @@
     });
 
     window.Terms.attach();
+    const target = location.hash && document.querySelector(location.hash);
+    if (target) requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
